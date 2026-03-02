@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero';
 import Grid from '@/components/Grid';
 import Experience from '@/components/Experience';
+import Projects from '@/components/Projects';
 import { FloatingNav } from '@/components/ui/floating-navbar';
 import { navItems } from '@/data';
 
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <Grid />
         <Experience />
+        <Projects />
       </div>
     </main>
   );
