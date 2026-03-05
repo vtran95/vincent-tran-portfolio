@@ -5,7 +5,9 @@ Modern, responsive portfolio built with Next.js, Tailwind CSS, and Motion.
 ## 🚀 Live Site
 
 View the live site here:
-👉 https://placeholder.vercel.app
+👉 https://vincent-tran.vercel.app/
+
+![Portfolio Screenshot](./public/portfolio.PNG)
 
 ## 🛠 Tech Stack
 
