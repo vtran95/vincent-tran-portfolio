@@ -90,7 +90,7 @@ export const projects = [
     title: 'Code to English',
     desc: 'An AI-powered code analysis tool that explains, debugs, and reviews code in plain English. Paste any code snippet, select a mode, and get structured feedback streamed back in real time.',
     img: '/projects-1.png',
-    iconLists: ['/re.svg', '/ts.svg', '/tail.svg', 'node.js.svg'],
+    iconLists: ['/re.svg', '/ts.svg', '/tail.svg', 'nodejs.svg'],
     link: 'https://code-to-english.vercel.app',
   },
 ];
