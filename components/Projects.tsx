@@ -1,9 +1,15 @@
-import React from 'react';
+"use client";
 import { projects } from '@/data';
 import { Meteors } from './ui/meteors';
 import Image from 'next/image';
+import { motion } from 'motion/react';
 
 const Projects = () => {
+
+  const shortenLink = (link: string): string => {
+    return link.replace("https://", "");
+  }
+
   return (
     <section id="projects" className="flex flex-col justify-center mt-10 pt-35 mb-35">
       <h1 className="text-4xl font-bold text-center mb-10">
@@ -14,32 +20,37 @@ const Projects = () => {
         {projects.map(({ id, title, desc, img, iconLists, link }) => (
           <div
             key={id}
-            className="flex items-center justify-center sm:w-110 w-[80vw] h-full"
+            className="flex items-center justify-center sm:w-115 w-[80vw] h-full"
           >
-            <a href="https://code-to-english.vercel.app/" target="_blank" className="group block">
-              <div className="relative flex flex-col bg-card cursor-pointer rounded-2xl overflow-hidden p-[2px]
-                before:content-[''] before:absolute before:inset-[-50%] 
-                before:animate-border-spin before:bg-pink-purple-conic
-                before:invisible group-hover:before:visible">
-                <div className="relative flex flex-col bg-card cursor-pointer rounded-2xl border border-white/10 p-7">
-                  <div className="relative w-100 h-full">
-                    <Image src={img} alt={title} width={500} height={300} className="w-full h-auto" />
-                    <div className="absolute -bottom-8 -right-3 flex flex-col w-fit border border-white/30 rounded-full bg-background p-2">
-                      {iconLists.map(icon => {
-                        return <Image key={icon} src={icon} alt={icon} width={25} height={25} className="py-1.5" />
-                      })}
-                    </div>
-                  </div>
-                  <h3 className="dark:text-white text-2xl font-semibold my-2 ml-2">{title}</h3>
-
-                  {/* TO DO: Add tech stack tags */}
-
-                  <div className="ml-2">
-                    <p>{desc}</p>
+            <div className="relative flex flex-col bg-card rounded-2xl overflow-hidden p-0.5 before:content-[''] before:absolute before:inset-[-50%] before:animate-border-spin before:bg-pink-purple-conic">
+              <div className="relative flex flex-col bg-card rounded-2xl border border-white/10 p-7">
+                <div className="relative sm:w-100 h-full">
+                  <Image src={img} alt={title} width={500} height={300} className="w-full h-auto" />
+                  <div className="absolute -bottom-8 -right-3 flex flex-col w-fit border border-white/30 rounded-full bg-background p-2">
+                    {iconLists.map(icon => {
+                      return <Image key={icon} src={icon} alt={icon} width={20} height={20} className="py-1.5 w-auto h-auto" />
+                    })}
                   </div>
                 </div>
+                <h3 className="dark:text-white text-2xl font-semibold my-2 ml-2">{title}</h3>
+
+                <motion.a
+                  href={link}
+                  target="_blank"
+                  className="ml-2 mb-2 text-blue-400 w-fit"
+                  whileHover={{ x: 2 }}
+                >
+                  {shortenLink(link)}
+                </motion.a>
+
+
+                {/* TO DO: Add tech stack tags */}
+
+                <div className="ml-2">
+                  <p>{desc}</p>
+                </div>
               </div>
-            </a>
+            </div>
           </div>
         ))}
         <div className="flex sm:w-110 w-[80vw]">
