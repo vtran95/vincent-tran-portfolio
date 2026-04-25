@@ -17,7 +17,7 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="my-20 py-20 lg:h-200">
+    <section id="experience" className="py-20 lg:h-200">
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-20">
         Check out my
         <span className="text-purple-300"> work experience</span>
@@ -35,10 +35,10 @@ const Experience = () => {
                 boxShadow:
                   activeCard === work
                     ? [
-                        '0 0 5px  rgba(168,85,247,0.4)',
-                        '0 0 5px rgba(168,85,247,1)',
-                        '0 0 5px  rgba(168,85,247,0.4)',
-                      ]
+                      '0 0 5px  rgba(168,85,247,0.4)',
+                      '0 0 5px rgba(168,85,247,1)',
+                      '0 0 5px  rgba(168,85,247,0.4)',
+                    ]
                     : '0 0 0px rgba(0,0,0,0)',
               }}
               transition={{
@@ -47,10 +47,10 @@ const Experience = () => {
                 boxShadow:
                   activeCard === work
                     ? {
-                        duration: 1.25,
-                        repeat: Infinity,
-                        ease: 'easeInOut',
-                      }
+                      duration: 1.25,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    }
                     : undefined,
               }}
               className="relative flex flex-col bg-card cursor-pointer rounded-2xl border border-white/10 p-5"

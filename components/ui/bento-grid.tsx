@@ -115,7 +115,7 @@ export const BentoGridItem = ({
           {/* Tech stack bubbles for first cell */}
           {id === 1 && (
             <div className="mt-10 px-1 sm:pl-6 md:pl-8">
-              <div className="flex flex-row flex-wrap mx-auto gap-3 lg:gap-8 ">
+              <div className="flex flex-row flex-wrap mx-auto gap-3 lg:gap-8 cursor-default">
                 {techStack.map((tech) => (
                   <TechItem key={tech.title + tech.id} {...tech} />
                 ))}

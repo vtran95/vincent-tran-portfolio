@@ -17,8 +17,8 @@ import { FaJava } from 'react-icons/fa6';
 export const navItems = [
   { name: 'Home', link: '#home' },
   { name: 'About', link: '#about' },
-  { name: 'Experience', link: '#experience' },
   { name: 'Projects', link: '#projects' },
+  { name: 'Experience', link: '#experience' },
   { name: 'Contact', link: '#contact' },
 ];
 
@@ -87,11 +87,11 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: 'Test Project',
-    desc: 'This is a description for a project I built to learn x and y technologies.',
-    img: '/b1.svg',
-    iconLists: ['/re.svg', '/next.svg', '/ts.svg', '/tail.svg'],
-    link: '',
+    title: 'Code to English',
+    desc: 'An AI-powered code analysis tool that explains, debugs, and reviews code in plain English. Paste any code snippet, select a mode, and get structured feedback streamed back in real time.',
+    img: '/projects-1.png',
+    iconLists: ['/re.svg', '/ts.svg', '/tail.svg', 'node.js.svg'],
+    link: 'https://code-to-english.vercel.app',
   },
 ];
 
@@ -165,7 +165,7 @@ export const workExperience = [
           support new data structures.
         </p>
         <p>
-          Resolved 4–6 bugs per sprint, significantly enhancing application
+          Resolved 4-6 bugs per sprint, significantly enhancing application
           stability, usability, and overall product quality.
         </p>
       </>

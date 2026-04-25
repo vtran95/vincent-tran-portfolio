@@ -17,6 +17,7 @@ export const Meteors = ({
   className?: string;
 }) => {
   const meteorCount = number || 20;
+  const width: number = 442;
 
   const meteors = new Array(meteorCount).fill(true).map((_, idx) => {
     return {
@@ -35,7 +36,7 @@ export const Meteors = ({
       {meteors.map((meteor, idx) => {
         const meteorCount = number || 20;
         // Calculate position to evenly distribute meteors across container width
-        const position = idx * (1000 / meteorCount) - 500; // Spread across 1000px range, centered
+        const position = idx * (width / meteorCount); // Spread across width range
 
         return (
           <span
@@ -46,7 +47,7 @@ export const Meteors = ({
               className,
             )}
             style={{
-              top: '-40px', // Start above the container
+              top: '-20px', // Start above the container
               left: `${position}px`,
               animationDelay: `${meteor.delay}s`,
               animationDuration: `${meteor.duration}s`,
